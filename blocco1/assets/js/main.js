@@ -40,7 +40,7 @@
 
 // let risultato = parole(parolaUno, parolaDue);
 // console.log(risultato);
-//!chiedere 5 numeri all'utente, il programma stampa la somma dei numeri, esegui questo programma con il for e con il while
+//!3)chiedere 5 numeri all'utente, il programma stampa la somma dei numeri, esegui questo programma con il for e con il while
 
 //TODO arrow function ciclo for
 // let arrayVuoto = [];
@@ -81,6 +81,47 @@
 // let risultatoWhile = sommaWhile(whileArray);
 // console.log(risultatoWhile);
 
-//!3) In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
-
+//!4) In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
+// let listaInvitati = ['Luca', 'Pippo', 'Gino', 'Maria', 'Maddalena'];
+// let invito = prompt('inserisci il tuo nome e vedi se sei stato invitato');
 //arrow function
+/**
+ * arrow function che chiede una stringa e verifica se la stringa è all'interno di un array
+ * //@param {str} str 
+ * //@param {array} array 
+ */
+// const confermaLista = (str, array) => {
+//     let checkedLista = false;
+//     for (let i = 0; i < array.length; i++) {
+//         let element = array[i];
+//         if (element === str) {
+//             checkedLista = true;
+//         }; 
+        
+//     };
+//     if (checkedLista == true) {
+//         alert('Siete stato cordialmente invitato alla festa!');
+//     } else {
+//         alert('Fuori dai piedi impostore!');
+//     };
+// };
+// confermaLista(invito, listaInvitati);
+
+//!5) Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+let arrayUtente = [];
+/**
+ * funzione arrow che chiede 6 numeri e li mette in un array se sono dispari
+ * @param {array} array 
+ */
+const numeriDispariArray = (array) =>{
+    let i = 0;
+    while (i < 7) {
+        let numeroUtente = Number(prompt('dammi un numero'));
+        if (numeroUtente % 2 != 0) {
+            array.push(numeroUtente);
+        }
+        i++;
+    }
+};
+numeriDispariArray(arrayUtente);
+console.log(arrayUtente);
